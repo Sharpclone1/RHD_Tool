@@ -35,4 +35,29 @@
     <string name="monitoring_connectivity">Monitoring connectivity…</string>
     <string name="notif_channel_name">RHD Monitor</string>
     <string name="notif_channel_desc">Foreground service for network/bluetooth monitoring</string>
+
+    <!-- MainActivity text -->
+    <string name="wifi_drops">WiFi drops: %1$d</string>
+    <string name="mobile_drops">Mobile drops: %1$d</string>
+    <string name="mobile_sim_absent">Mobile: SIM absent</string>
+    <string name="mobile_sim_ready">Mobile: SIM ready</string>
+    <string name="mobile_no_coverage">Mobile: No coverage</string>
+    <string name="mobile_coverage_restored">Mobile: Coverage restored</string>
+    <string name="mobile_no_service">Mobile: No service</string>
+    <string name="mobile_service_restored">Mobile: Service restored</string>
+    <string name="since_last_pct_change">Since last %% change: %1$s</string>
+    <string name="battery_declared">Battery declared: %1$d%%  •  %2$s</string>
+    <string name="battery_declared_dash">Battery declared: —</string>
+    <string name="since_last_pct_change_dash">Since last % change: —</string>
+    <string name="avg_drop_interval_dash">Avg % drop interval: —</string>
+    <string name="wifi_dash">WiFi: —</string>
+    <string name="mobile_dash">Mobile: —</string>
+    <string name="battery_dash">Battery: —</string>
+    <string name="charging_rate_dash">Charging rate: —</string>
+    <string name="charging_events_zero">Charging events: 0</string>
+    <string name="battery">Battery: %1$d%%</string>
+    <string name="avg_drop_interval">Avg % drop interval: %1$s</string>
+    <string name="charging_events">Charging events: %1$d</string>
+    <string name="charging_rate">Charging rate: %.2f%%/hr</string>
+    <string name="charging_rate_ma">Charging rate: %1$s mA/h</string>
 </resources>

@@ -58,7 +58,7 @@
         android:layout_height="wrap_content"
         android:text="Since last % change: —"
         android:textColor="@android:color/white"
-        app:layout_constraintTop_toBottomOf="@id/statusBattery"
+        app:layout_constraintTop_toBottomOf="@+id/statusBattery"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
 
@@ -68,7 +68,43 @@
         android:layout_height="wrap_content"
         android:text="Avg % drop interval: —"
         android:textColor="@android:color/white"
-        app:layout_constraintTop_toBottomOf="@id/statusSinceChange"
+        app:layout_constraintTop_toBottomOf="@+id/statusSinceChange"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="8dp" />
+
+    <!-- Charging session controls -->
+    <Button
+        android:id="@+id/btnStartChargingSession"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Start Charging Session"
+        android:backgroundTint="#4CAF50"
+        android:textColor="@android:color/white"
+        android:layout_marginTop="16dp"
+        app:layout_constraintTop_toBottomOf="@+id/statusAvgDrop"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <TextView
+        android:id="@+id/statusChargingRate"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="Charging rate: —"
+        android:textColor="@android:color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnStartChargingSession" />
+
+    <TextView
+        android:id="@+id/statusChargingEvents"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Charging events: —"
+        android:textColor="@android:color/white"
+        app:layout_constraintTop_toBottomOf="@+id/statusChargingRate"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
 
@@ -79,7 +115,8 @@
         android:layout_height="wrap_content"
         android:text="WiFi: —"
         android:textColor="@android:color/white"
-        app:layout_constraintTop_toBottomOf="@+id/statusAvgDrop"
+        android:layout_marginTop="16dp"
+        app:layout_constraintTop_toBottomOf="@+id/statusChargingEvents"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/statusMobile"
         app:layout_constraintHorizontal_weight="1" />
@@ -126,7 +163,20 @@
         android:layout_width="0dp"
         android:layout_height="0dp"
         app:layout_constraintTop_toBottomOf="@+id/tallyWifi"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/btnPauseLog"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
+
+    <Button
+        android:id="@+id/btnPauseLog"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Pause Log"
+        android:backgroundTint="#607D8B"
+        android:textColor="@android:color/white"
+        app:layout_constraintTop_toBottomOf="@+id/eventLog"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="8dp" />
 </androidx.constraintlayout.widget.ConstraintLayout>
