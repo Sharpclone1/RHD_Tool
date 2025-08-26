@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- App -->
+    <string name="app_name">RHD Tool</string>
+
+    <!-- Toolbar / actions -->
+    <string name="action_export">Export</string>
+    <string name="action_clear">Clear</string>
+
+    <!-- Status text -->
+    <string name="monitoring_on">Monitoring…</string>
+    <string name="monitoring_off">Monitoring is off</string>
+    <string name="start_monitoring">Start monitoring</string>
+    <string name="stop_monitoring">Stop monitoring</string>
+
+    <string name="start">Start</string>
+    <string name="stop">End</string>
+
+
+
+    <!-- menu (keep if you use it) -->
+
+
+    <!-- Chart / UI -->
+    <string name="no_chart_data">No chart data available</string>
+
+    <!-- List row -->
+    <string name="time_placeholder">--:--</string>
+    <string name="type_wifi">Wi-Fi</string>
+    <string name="type_mobile">Mobile</string>
+    <string name="type_bluetooth">Bluetooth</string>
+    <string name="type_network">Network</string>
+
+    <!-- Notifications -->
+    <string name="monitoring_connectivity">Monitoring connectivity…</string>
+    <string name="notif_channel_name">RHD Monitor</string>
+    <string name="notif_channel_desc">Foreground service for network/bluetooth monitoring</string>
+</resources>

@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="12dp"
+    android:background="@android:color/black">
+
+    <!-- Top status row -->
+    <TextView
+        android:id="@+id/statusDeclaredBattery"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Battery declared: —"
+        android:textStyle="bold"
+        android:textColor="@android:color/white"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/btnDeclareBattery" />
+
+    <Button
+        android:id="@+id/btnDeclareBattery"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Declare"
+        android:backgroundTint="#9C27B0"
+        android:textColor="@android:color/white"
+        app:layout_constraintTop_toTopOf="@+id/statusDeclaredBattery"
+        app:layout_constraintBottom_toBottomOf="@+id/statusDeclaredBattery"
+        app:layout_constraintEnd_toStartOf="@+id/btnClear" />
+
+    <Button
+        android:id="@+id/btnClear"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Clear"
+        android:backgroundTint="@android:color/holo_red_dark"
+        android:textColor="@android:color/white"
+        app:layout_constraintTop_toTopOf="@+id/statusDeclaredBattery"
+        app:layout_constraintBottom_toBottomOf="@+id/statusDeclaredBattery"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <!-- Battery live status + timers -->
+    <TextView
+        android:id="@+id/statusBattery"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Battery: —"
+        android:textColor="@android:color/white"
+        app:layout_constraintTop_toBottomOf="@+id/statusDeclaredBattery"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <TextView
+        android:id="@+id/statusSinceChange"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Since last % change: —"
+        android:textColor="@android:color/white"
+        app:layout_constraintTop_toBottomOf="@id/statusBattery"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <TextView
+        android:id="@+id/statusAvgDrop"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Avg % drop interval: —"
+        android:textColor="@android:color/white"
+        app:layout_constraintTop_toBottomOf="@id/statusSinceChange"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <!-- Connectivity statuses -->
+    <TextView
+        android:id="@+id/statusWifi"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="WiFi: —"
+        android:textColor="@android:color/white"
+        app:layout_constraintTop_toBottomOf="@+id/statusAvgDrop"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/statusMobile"
+        app:layout_constraintHorizontal_weight="1" />
+
+    <TextView
+        android:id="@+id/statusMobile"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Mobile: —"
+        android:textColor="@android:color/white"
+        app:layout_constraintTop_toTopOf="@+id/statusWifi"
+        app:layout_constraintBottom_toBottomOf="@+id/statusWifi"
+        app:layout_constraintStart_toEndOf="@+id/statusWifi"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_weight="1" />
+
+    <!-- Tallies -->
+    <TextView
+        android:id="@+id/tallyWifi"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="WiFi drops: 0"
+        android:textColor="@android:color/white"
+        app:layout_constraintTop_toBottomOf="@+id/statusWifi"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/tallyMobile"
+        app:layout_constraintHorizontal_weight="1" />
+
+    <TextView
+        android:id="@+id/tallyMobile"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Mobile drops: 0"
+        android:textColor="@android:color/white"
+        app:layout_constraintTop_toTopOf="@+id/tallyWifi"
+        app:layout_constraintBottom_toBottomOf="@+id/tallyWifi"
+        app:layout_constraintStart_toEndOf="@+id/tallyWifi"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_weight="1" />
+
+    <!-- Log -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/eventLog"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintTop_toBottomOf="@+id/tallyWifi"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>
